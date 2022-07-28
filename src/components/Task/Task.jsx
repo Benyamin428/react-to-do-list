@@ -1,11 +1,18 @@
 import "./Task.scss";
-import Button from "../Button/Button";
+import { useState } from "react";
 
-const Task = ({taskId, taskDesc, checked, setCheckbox, deleteTask}) => {
+const Task = ({taskId, taskDesc, deleteTask}) => {
+
+    const [checked, setChecked] = useState(false);
+
+    const setCheckbox = () => {
+        setChecked(!checked);
+    }
+
     return (
         <>
             <input type="checkbox" id="task" onChange={setCheckbox} />
-            <label className={checked?"checked":"unchecked"}htmlFor="task"> {taskDesc}</label>
+            <label className={checked?"checked":"unchecked"} htmlFor="task"> {taskDesc}</label>
             <button onClick={() => deleteTask(taskId)}>Delete</button>
         </>
     );
