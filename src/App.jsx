@@ -38,7 +38,7 @@ const App = () => {
     <div className="container">
       <Heading reset={reset} />
       <Taskbar addTask={addTask} />
-      {tasks.length > 0 ? <Main tasks={tasks} deleteTask={deleteTask} /> : <p class="display-text">Nothing to see here yet... Add a task in the field above! <FaHandPointUp /></p>}
+      {tasks.length > 0 ? <Main tasks={tasks} deleteTask={deleteTask} /> : <p class="display-text">Nothing to see here yet... Add a task in the field above! <FaHandPointUp />git </p>}
     </div>
   );
 }
