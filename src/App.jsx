@@ -16,11 +16,15 @@ const App = () => {
     event.target[0].value = null;
   }
 
+  const deleteTask = (id) => {
+    setTasks(tasks.filter(task => task.id!=id));
+  }
+
   return (
     <>
       <Heading />
       <Taskbar addTask={addTask} />
-      <Main tasks={tasks} />
+      <Main tasks={tasks} deleteTask={deleteTask} />
     </>
   );
 }
