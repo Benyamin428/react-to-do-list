@@ -1,11 +1,11 @@
-import Button from "../Button/Button";
 import "./Heading.scss";
 
-const Heading = () => {
+const Heading = ({reset}) => {
     return (
         <div className="heading">
             <h1>My Todos</h1>
-            <Button buttonText="Reset" />
+            
+            <button onClick={reset}>Reset</button>
         </div>
     );
   }

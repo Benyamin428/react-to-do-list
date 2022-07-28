@@ -9,6 +9,12 @@ const App = () => {
   const [tasks, setTasks] = useState([]);
 
   const addTask = (event) => {
+
+    if (event.target[0].value == "") {
+      alert("please enter a todo");
+      return;
+    }
+
     event.preventDefault();
     setTasks([...tasks, {id: tasks.length, description: event.target[0].value}])
 
@@ -20,9 +26,13 @@ const App = () => {
     setTasks(tasks.filter(task => task.id!=id));
   }
 
+  const reset = () => {
+    setTasks([]);
+  }
+
   return (
     <>
-      <Heading />
+      <Heading reset={reset} />
       <Taskbar addTask={addTask} />
       <Main tasks={tasks} deleteTask={deleteTask} />
     </>
