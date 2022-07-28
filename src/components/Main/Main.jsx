@@ -1,6 +1,15 @@
-const Main = () => {
+import Task from "../Task/Task";
+
+const Main = ({tasks}) => {
+
+    const listOfTasks = tasks.map(task => {
+        return <Task key={task.id} taskDesc={task.description} />
+    })
+
     return (
-        <p>Hello World</p>
+        <>
+            {listOfTasks}
+        </>
     );
   }
   

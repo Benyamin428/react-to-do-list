@@ -1,5 +1,4 @@
 import Button from "../Button/Button";
-import Taskbar from "../Taskbar/Taskbar";
 import "./Heading.scss";
 
 const Heading = () => {

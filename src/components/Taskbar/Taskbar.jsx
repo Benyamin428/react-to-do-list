@@ -1,12 +1,11 @@
-import Input from "../Input/Input";
 import Button from "../Button/Button";
 
-const Taskbar = () => {
+const Taskbar = ({addTask}) => {
     return (
-    <>
-        <Input />
-        <Button buttonText="Add" />
-    </>
+        <form onSubmit={addTask}>
+            <input type="text" />
+            <Button buttonText="Add" />
+        </form>
     );
   }
   
