@@ -1,3 +1,5 @@
+@use "./sass/variables" as *;
+
 * {
     margin: 0;
     padding: 0;
@@ -9,4 +11,9 @@
         padding-left: 5rem;
         padding-right: 5rem;
     }    
+}
+
+.display-text {
+    padding: 1rem;
+    font-family: $font;
 }

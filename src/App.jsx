@@ -4,6 +4,8 @@ import Heading from "./components/Heading/Heading";
 import Taskbar from "./components/Taskbar/Taskbar";
 import Main from "./components/Main/Main";
 
+import { FaHandPointUp } from "react-icons/fa";
+
 import "./App.scss";
 
 const App = () => {
@@ -36,7 +38,7 @@ const App = () => {
     <div className="container">
       <Heading reset={reset} />
       <Taskbar addTask={addTask} />
-      <Main tasks={tasks} deleteTask={deleteTask} />
+      {tasks.length > 0 ? <Main tasks={tasks} deleteTask={deleteTask} /> : <p class="display-text">Nothing to see here yet... Add a task in the field above! <FaHandPointUp /></p>}
     </div>
   );
 }
