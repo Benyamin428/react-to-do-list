@@ -1,4 +1,26 @@
+@use "../../sass/variables" as *;
+
 .heading {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 1rem;
+    font-family: $font;
+
+    &__title {
+        font-weight: 900;
+    }
+
+    &__button {
+        padding: 0 0.5rem;
+        background: none;
+        border-radius: 10px;
+        border: 2px solid $color;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    &__button:hover {
+        cursor: pointer;
+        opacity: 0.3;
+    }
 }

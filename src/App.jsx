@@ -4,6 +4,8 @@ import Heading from "./components/Heading/Heading";
 import Taskbar from "./components/Taskbar/Taskbar";
 import Main from "./components/Main/Main";
 
+import "./App.scss";
+
 const App = () => {
 
   const [tasks, setTasks] = useState([]);
@@ -31,11 +33,11 @@ const App = () => {
   }
 
   return (
-    <>
+    <div className="container">
       <Heading reset={reset} />
       <Taskbar addTask={addTask} />
       <Main tasks={tasks} deleteTask={deleteTask} />
-    </>
+    </div>
   );
 }
 

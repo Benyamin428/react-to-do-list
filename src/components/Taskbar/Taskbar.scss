@@ -1,0 +1,28 @@
+@use "../../sass/variables" as *;
+
+.taskbar {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+    &__input {
+        padding: 0.3rem;
+        width: 85%;
+        border: 2px solid $color;
+        border-radius: 10px 0 0 10px;
+    }
+
+    &__button {
+        background: none;
+        font-size: 1.2rem;
+        width: 15%;
+        border: 2px solid $color;
+        padding: 0.3rem;
+        border-radius: 0 10px 10px 0;
+    }
+
+    &__button:hover {
+        cursor: pointer;
+        opacity: 0.3;
+    }
+}

@@ -1,3 +1,27 @@
-.checked {
-    text-decoration: line-through;
+@use "../../sass/variables" as *;
+
+.task {
+    border: 2px solid $color;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 1rem;
+    font-family: $font;
+    font-size: 1.2rem;
+
+    &__checked {
+        text-decoration: line-through;
+    }
+
+    &__button {
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+    }
+
+    &__button:hover {
+        cursor: pointer;
+        opacity: 0.3;
+    }
 }

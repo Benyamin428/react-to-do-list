@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }    
+}
